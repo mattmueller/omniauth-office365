@@ -36,7 +36,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('api/v2.0/me').parsed
+        @raw_info ||= { 'DisplayName' => 'test', 'EmailAddress' => 'muellermr@gmail.com', 'rawToken' => access_token }
       end
     end
   end
